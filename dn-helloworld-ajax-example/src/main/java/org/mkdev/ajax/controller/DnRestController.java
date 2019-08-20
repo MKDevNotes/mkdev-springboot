@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/ajaxdemo")
 public class DnRestController {
-	
+
 	@GetMapping(value = "/testmsg")
 	public String getAjaxText() {
 
-		return "Hello Ajax Example";
+		return "Hello Ajax Modifiy Example";
 	}
 }
