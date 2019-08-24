@@ -15,6 +15,6 @@ public class DnRestController {
 	@GetMapping(value = "/testmsg")
 	public String getAjaxText() {
 
-		return "Hello Ajax Modifiy Example";
+		return "Hello Ajax Modifiy Example Demo..";
 	}
 }
