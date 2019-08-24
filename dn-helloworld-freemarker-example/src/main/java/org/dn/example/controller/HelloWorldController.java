@@ -14,7 +14,7 @@ public class HelloWorldController {
 	@RequestMapping("/")
 	public String home(ModelMap modelMap) {
 		// TODO Auto-generated method stub
-		modelMap.addAttribute("title", "Hello Title");
+		modelMap.addAttribute("title", "Hello FreeMaker Template");
 		modelMap.addAttribute("message", "Welcome to MKDev Notes");
 		return "hello";
 	}
