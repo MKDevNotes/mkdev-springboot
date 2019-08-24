@@ -19,7 +19,7 @@ public class DnHelloWorldController {
 	@Value("${app.welcome.title}")
 	private String title = "";
 
-	@RequestMapping("/")
+	@RequestMapping("/home")
 	public String welcome(Map<String, Object> model) {
 		// TODO Auto-generated method stub
 		model.put("title", title);
