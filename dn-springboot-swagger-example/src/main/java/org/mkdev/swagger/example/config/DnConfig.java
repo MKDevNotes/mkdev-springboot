@@ -10,6 +10,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
+/**
+ * @author muthukumar thangavinayagam
+ *
+ */
 @EnableSwagger2
 @Configuration
 public class DnConfig {

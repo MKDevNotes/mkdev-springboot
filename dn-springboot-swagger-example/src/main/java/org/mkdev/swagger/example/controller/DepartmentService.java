@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
+/**
+ * @author muthukumar thangavinayagam
+ *
+ */
+
 @RestController
 @RequestMapping("/rest/department")
 @Api(value = "Department Servuce")
