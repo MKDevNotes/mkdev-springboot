@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
-<%@ include file="init.jsp" %>
+<%@ include file="init.jsp"%>
 </head>
 <body>
 	<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
@@ -15,60 +15,26 @@
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> Hey UserName </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="${userLogoutURL}">Logout</a>
+							<!-- <a class="dropdown-item" href="#">Another action</a> -->
+							<!-- <div class="dropdown-divider"></div> -->
+							<!-- <a class="dropdown-item" href="#">Something else here</a> -->
+						</div></li>
 				</ul>
-
 			</div>
 		</div>
 	</nav>
 
 	<main class="login-form">
 	<div class="cotainer">
-		<div class="row justify-content-center">
-			<div class="col-md-8">
-				<div class="card">
-					<div class="card-header">Register</div>
-					<div class="card-body">
-						<form action="" method="">
-							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
-								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
-								</div>
-							</div>
-							<div class="form-group row">
-								<label for="password"
-									class="col-md-4 col-form-label text-md-right">Password</label>
-								<div class="col-md-6">
-									<input type="password" id="password" class="form-control"
-										name="password" required>
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col-md-6 offset-md-4">
-									<div class="checkbox">
-										<label> <input type="checkbox" name="remember">
-											Remember Me
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 offset-md-4">
-								<button type="submit" class="btn btn-primary">Register
-								</button>
-								<a href="/reset" class="btn btn-link"> Forgot Your Password? </a>
-							</div>
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
+		<div class="row justify-content-center">Welcome Page..</div>
 	</div>
 	</main>
 

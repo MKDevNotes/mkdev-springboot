@@ -1,10 +1,7 @@
 package org.mkdev.springboot.login.action;
 
-import java.util.Map;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * @author muthukumar thangavinayagam.
@@ -14,18 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class DnWelcomeController {
 
-	@RequestMapping({"/", "/welcome"})
-	public String welcome(Map<String, Object> model) {
-		return "welcome";
-	}
+	@GetMapping("/userLogout")
+	public String logout() {
 
-	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public String registerPage() {
-		return "register";
-	}
-	
-	@RequestMapping(value = "/reset", method = RequestMethod.GET)
-	public String resetPage() {
-		return "resetpassword";
+		return "login";
 	}
 }

@@ -1,3 +1,8 @@
+<%@ page session="false"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!--  Static resources form Webjars -->
 <link rel="stylesheet"
 	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -52,3 +57,8 @@ body{
     margin-right: 0;
 }
 </style>
+
+<spring:url value="/login" var="loginPageURL" />
+<spring:url value="/userRegister" var="userRegisterUrl" />
+<spring:url value="/userLogout" var="userLogoutURL" />
+<spring:url value="/userLoginValidate" var="userLoginValidateURL" />

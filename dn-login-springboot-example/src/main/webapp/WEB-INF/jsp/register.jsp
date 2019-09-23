@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
 <%@ include file="init.jsp" %>
@@ -18,13 +16,14 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a class="nav-link" href="/welcome">Login</a></li>
+					<li class="nav-item"><a class="nav-link" href="${loginPageURL}">Login</a></li>
 				</ul>
 
 			</div>
 		</div>
 	</nav>
-
+	
+	
 	<main class="login-form">
 	<div class="cotainer">
 		<div class="row justify-content-center">
@@ -32,67 +31,71 @@
 				<div class="card">
 					<div class="card-header">Register</div>
 					<div class="card-body">
-						<form action="" method="">
+						<form:form class="form-horizontal" method="post"  action="${userRegisterUrl}">
 							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
+								<label for="username"
+									class="col-md-4 col-form-label text-md-right">User Name</label>
 								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
+									<input type="text" id="username" class="form-control"
+										name="username" >
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
+								<label for="firstName"
+									class="col-md-4 col-form-label text-md-right">First Name</label>
 								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
+									<input type="text" id="firstName" class="form-control"
+										name="firstName" >
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
+								<label for="lastName"
+									class="col-md-4 col-form-label text-md-right">Last Name</label>
 								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
+									<input type="text" id="lastName" class="form-control"
+										name="lastName">
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
+								<label for="email" class="col-md-4 col-form-label text-md-right">E-Mail	Address</label>
 								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
+									<input type="text" id="email" class="form-control" name="email">
 								</div>
 							</div>
 							<div class="form-group row">
-								<label for="email_address"
-									class="col-md-4 col-form-label text-md-right">E-Mail
-									Address</label>
+								<label for="gender"
+									class="col-md-4 col-form-label text-md-right">Gender</label>
 								<div class="col-md-6">
-									<input type="text" id="email_address" class="form-control"
-										name="email-address" required autofocus>
+									<input type="text" id="gender" class="form-control" name="gender" >
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="contact"
+									class="col-md-4 col-form-label text-md-right">Contact Number</label>
+								<div class="col-md-6">
+									<input type="contact" id="contact" class="form-control" name="contact">
 								</div>
 							</div>
 							<div class="form-group row">
 								<label for="password"
 									class="col-md-4 col-form-label text-md-right">Password</label>
 								<div class="col-md-6">
-									<input type="password" id="password" class="form-control"
-										name="password" required>
+									<input type="password" id="password" class="form-control" name="password">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="confpassword"
+									class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+								<div class="col-md-6">
+									<input type="password" id="confirmPassword" class="form-control" name="confirmPassword">
 								</div>
 							</div>
 							<div class="col-md-6 offset-md-4">
-								<button type="submit" class="btn btn-primary">Register
-								</button>
-								<a href="#" class="btn btn-link"> Forgot Your Password? </a>
+								<button type="submit" class="btn btn-primary">Register</button> &nbsp;
+								<button type="reset" class="btn btn-primary">Cancel</button>
 							</div>
 					</div>
-					</form>
+					</form:form>
 				</div>
 			</div>
 		</div>
