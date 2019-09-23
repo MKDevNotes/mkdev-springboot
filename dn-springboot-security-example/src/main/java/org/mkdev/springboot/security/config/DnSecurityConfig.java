@@ -8,6 +8,11 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * @author muthukumar thangavinayagam.
+ *
+ */
+
 @EnableWebSecurity
 @Configuration
 public class DnSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -41,4 +46,11 @@ public class DnSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 	}
 
+	/* Basic without Auth
+	 * @Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http.authorizeRequests().anyRequest().permitAll().and().httpBasic();
+
+			http.csrf().disable();
+		}*/
 }
