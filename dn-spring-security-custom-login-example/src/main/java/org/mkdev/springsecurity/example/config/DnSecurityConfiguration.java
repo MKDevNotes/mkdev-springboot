@@ -27,7 +27,12 @@ public class DnSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.passwordParameter("password").and().logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/userLogout"))
 				.logoutSuccessUrl("/").and().exceptionHandling()
-				.accessDeniedPage("/access-denied");
+				.accessDeniedPage("/access-denied")
+				.and()
+                .sessionManagement()
+                .maximumSessions(-1)
+                .expiredUrl("/login?isExpired=true").maxSessionsPreventsLogin(true);
+		
 	}
 
 	@Override
