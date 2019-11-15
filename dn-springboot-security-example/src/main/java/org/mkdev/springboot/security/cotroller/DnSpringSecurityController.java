@@ -1,5 +1,7 @@
 package org.mkdev.springboot.security.cotroller;
 
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,10 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DnSpringSecurityController {
 
-	@RequestMapping("/rest/sayHello")
-	public String sayHello() {
-
-		return "Hello receiver";
+	@RequestMapping({ "/", "/login" })
+	public String welcome(Map<String, Object> model) {
+		return "login";
 	}
 
 }
