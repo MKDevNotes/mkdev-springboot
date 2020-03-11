@@ -69,4 +69,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //https://springbootdev.com/2017/08/30/difference-between-secured-rolesallowed-and-preauthorizepostauthorize/
 //https://www.devglan.com/spring-security/spring-oauth2-role-based-authorization
+//https://github.com/juhahinkula/StudentListFinal/tree/master/src/main/resources/templates
 //https://www.javaguides.net/2018/09/spring-boot-spring-mvc-role-based-spring-security-jpa-thymeleaf-mysql-tutorial.html
