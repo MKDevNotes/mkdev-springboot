@@ -14,7 +14,12 @@ public class UserLoginController {
 
     @RequestMapping("/home")
 	public String homePage() {
-    	return "home";
+    	return "homePage";
+    }	
+    
+    @RequestMapping("/userLogout")
+	public String userLogout() {
+    	return "login";
     }	
 
 }
