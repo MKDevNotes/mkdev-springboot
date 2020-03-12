@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Employee</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"	href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript" src="webjars/jquery/3.3.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<c:url value="/css/main.css" var="jstlCss" />
+<link href="${jstlCss}" rel="stylesheet" />
+</head>
+<body>
+	<div class="container my-2">
+		<div class="card">
+			<div class="card-body">
+				<div th:switch="${employeeList}" class="container my-5">
+					<p class="my-5">
+						<a href="/addEmployee" class="btn btn-primary">Add Employee</a>
+					</p>
+					<div class="col-md-10">
+						<h2 th:case="null">No Employee yet!</h2>
+						<div th:case="*">
+							<table class="table table-striped table-responsive-md">
+								<thead>
+									<tr>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Job Title</th>
+                                        <th>Salary</th>
+										<th>Edit</th>
+										<th>Delete</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="employee : ${employeeList}">
+										<td th:text="${employee.firstName}"></td>
+										<td th:text="${employee.lastName}"></td>
+										<td th:text="${employee.jobTitle}"></td>
+                                        <td th:text="${employee.salary}"></td>
+										<td><a th:href="@{/edit/{id}(id=${employee.employeeId})}"
+											class="btn btn-primary">Edit</a></td>
+										<td><a
+											th:href="@{/delete/{id}(id=${employee.employeeId})}"
+											class="btn btn-primary">Delete</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
